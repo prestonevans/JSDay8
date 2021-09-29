@@ -44,31 +44,59 @@
 
 
 
-    function ToDoList(id, name, toDos = []) {
+//     function ToDoList(id, name, toDos = []) {
+//         this.id = id;
+//         this.name = name;
+//         this.toDos = toDos;
+//         this.addToDo = (toDo) => {
+//             this.toDos.push(toDo);
+//         }
+//         this.removeToDo = (id) => {
+//             this.toDos = this.toDos.filter(toDo => toDo.id != id);
+//         }
+//         this.clearCompleted = () => {
+//             this.toDos = this.toDos.filter((toDo) => toDo.id != id)
+//         }
+//     }
+
+//     function ToDo(id, description, completed = false) {
+//         this.id = id;
+//         this.description = description;
+//         this.completed = completed;
+//     }
+// let list = new ToDoList(1,'shopping');
+// list.addToDo(new ToDo(1, 'bananas'));
+// list.addToDo(new ToDo(2, 'eggs'));
+
+// console.log(list)
+
+// ToDoList.removeToDo(2)
+// console.log(list)
+
+
+
+    class ToDoList {
+    constructor(id, name, toDos = []){
         this.id = id;
         this.name = name;
         this.toDos = toDos;
-        this.addToDo = (toDo) => {
-            this.toDos.push(toDo);
+    } 
+        addToDo(toDo) {
+            return this.toDos.push(toDo);
         }
-        this.removeToDo = (id) => {
+        removeToDo(id) {
             this.toDos = this.toDos.filter(toDo => toDo.id != id);
         }
-        this.clearCompleted = () => {
+        clearCompleted(){
             this.toDos = this.toDos.filter((toDo) => toDo.id != id)
         }
+    
     }
-
-    function ToDo(id, description, completed = false) {
-        this.id = id;
-        this.description = description;
-        this.completed = completed;
+    class ToDo {
+        constructor(id, description, completed = false) {
+            this.id = id;
+            this.description = description;
+            this.completed = completed;
+        }
     }
-let list = new ToDoList(1,'shopping');
-list.addToDo(new ToDo(1, 'bananas'));
-list.addToDo(new ToDo(2, 'eggs'));
-
-console.log(list)
-
-ToDoList.removeToDo(2)
-console.log(list)
+    
