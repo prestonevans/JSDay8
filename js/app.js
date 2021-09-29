@@ -99,4 +99,17 @@
             this.completed = completed;
         }
     }
-    
+
+let list = new ToDoList(1,'shopping');
+list.addToDo(new ToDo(1, 'bananas'));
+list.addToDo(new ToDo(2, 'eggs'));
+// console.log(list);
+// list.removeToDo(1);
+// console.log(list)
+
+let list2 = new ToDoList(2,'work',[new ToDo(1,'stuff'), new ToDo(2, 'test')])
+console.log(list2)
+list2.addToDo('Run');
+console.log(list2);
+list2.removeToDo(1);
+console.log(list2)
